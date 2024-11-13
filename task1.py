@@ -38,9 +38,13 @@ table = [
 ]
 
 def target(lvl,ac):
-    return
+    x = table[lvl][10-ac]
+    print(x)
+    return x
 
 def tests():
     assert target(5,7) == 11
     assert target(10,-10) == 20
     assert target(17,-3) == 13
+    
+tests()
