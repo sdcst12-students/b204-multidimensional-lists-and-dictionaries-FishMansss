@@ -32,10 +32,20 @@ teamData = {
         'goalsFor' : 0,
         'goalsAgainst' : 0
     },
-    'BC' : {}
+    
 }
 
+def sort(team):
+    for i in games:
+        if games[i]['home'] or games[i]['away'] == team:
+            print('1')
+sort('AB')
+
+
+
+'''
 def tests():
     assert teamData['BC']['gamesPlayed'] == 12
     assert teamData['BC']['wins'] == 5
 
+'''
