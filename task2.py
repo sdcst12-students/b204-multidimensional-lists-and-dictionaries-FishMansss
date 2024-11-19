@@ -31,21 +31,114 @@ teamData = {
         'ties' : 0,
         'goalsFor' : 0,
         'goalsAgainst' : 0
+    },'BC' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'MN' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'SK' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'ON' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'QC' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'PE' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'NS' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'NB' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'NL' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'YT' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'NT' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
+    },'NU' : {
+        'gamesPlayed' : 0,
+        'wins' : 0,
+        'losses' : 0,
+        'ties' : 0,
+        'goalsFor' : 0,
+        'goalsAgainst' : 0
     },
     
 }
 
-def sort(team):
-    for i in games:
-        if games[i]['home'] or games[i]['away'] == team:
-            print('1')
-sort('AB')
-
-
+for i in games:
+    teamData[i['home']]['gamesPlayed'] += 1
+    teamData[i['away']]['gamesPlayed'] += 1
+    teamData[i['home']]['goalsFor'] += i['homeScore']
+    teamData[i['away']]['goalsFor'] += i['awayScore']
+    
+    if i['homeScore'] > i['awayScore']:
+        teamData[i['home']]['wins'] += 1
+    if i['awayScore'] > i['homeScore']:
+        teamData[i['away']]['wins'] += 1
+    else:
+        teamData[i['home']]['ties'] += 1
+        teamData[i['away']]['ties'] += 1
+   
+   
+print(teamData)   
 
 '''
-def tests():
-    assert teamData['BC']['gamesPlayed'] == 12
-    assert teamData['BC']['wins'] == 5
-
-'''
+if  teamData['BC']['gamesPlayed'] == 12 and teamData['BC']['wins'] == 5:
+    print("all assertions passed :)")
+else:
+    print("ruh roh")'''
+ 

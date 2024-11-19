@@ -59,6 +59,8 @@ The flame wavers when Charmander is enjoying itself.
 If the Pokémon becomes enraged, the flame burns fiercely.
 
 """
+import os
+os.system('cls')
 
 
 
@@ -31847,3 +31849,16 @@ pokemon = [
   }
 ]
 
+p=1
+while p==1:
+  os.system('cls')
+  print("Choose a Pokemon by")
+  print("1. ID")
+  print("2. English Name")
+  x = input(' >> ')
+  
+  if x == 1:
+    x = input("Enter a Pokemon ID: >> ")
+    
+  if x == 2:
+     x = input("Enter a Pokemon English name: >> ")
