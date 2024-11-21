@@ -31849,16 +31849,37 @@ pokemon = [
   }
 ]
 
+
+
+
+
+
 p=1
 while p==1:
-  os.system('cls')
+
   print("Choose a Pokemon by")
   print("1. ID")
   print("2. English Name")
-  x = input(' >> ')
+  x = int(input(' >> '))
   
   if x == 1:
-    x = input("Enter a Pokemon ID: >> ")
-    
-  if x == 2:
-     x = input("Enter a Pokemon English name: >> ")
+    a = input("Enter a Pokemon ID: >> ")
+    print(pokemon[x-1]['name']['english'])
+
+
+    input()
+
+  if x==2:
+    z = len(pokemon)
+    a = str(input('Enter a Pokemon Name: >> '))
+    while z >= 0:
+      b = pokemon[z-1]['name']['english']
+      if a == b:
+        print(pokemon[z-1]['name']['english'])
+        input()
+      else:
+        z -= 1
+  else: 
+    print("I'm sorry, I can't find the name of the Pokemon.")
+    input('Enter to continue')
+
